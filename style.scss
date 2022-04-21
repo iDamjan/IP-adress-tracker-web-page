@@ -1,0 +1,101 @@
+//Variables
+
+$Main-font: "Rubik", sans-serif;
+$veryDarkGray: hsl(0, 0%, 17%);
+$darkGray: hsl(0, 0%, 59%);
+
+//Variables
+
+// REMOVE DEFAULT STYLES FOR SEARCH ELEMENTS
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+// REMOVE DEFAULT STYLES FOR SEARCH ELEMENTS
+
+#map {
+  height: 180px;
+  width: 100%;
+}
+body {
+  font-family: $Main-font;
+  background-image: url("images/pattern-bg.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.875rem 1.5rem;
+}
+
+.header {
+  h1 {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.search-bar {
+  width: 100%;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  border-radius: 15px;
+  background-color: white;
+  height: 3.75rem;
+  margin-top: 34px;
+  overflow: hidden;
+  .input_form {
+    width: 85%;
+    height: 100%;
+    input {
+      height: 100%;
+      width: 100%;
+      border: none;
+      padding: 1rem;
+      outline: none;
+      border: none;
+    }
+  }
+  .arrow_button{
+    background-color: black;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.address-information {
+  background-color: white;
+  width: 100%;
+  padding: 1.68rem 0;
+  margin-top: 1.68rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 0px 5px 20px 2px gray;
+  h3 {
+    color: $darkGray;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: $veryDarkGray;
+  }
+}

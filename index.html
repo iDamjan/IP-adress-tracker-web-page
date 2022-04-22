@@ -17,13 +17,15 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-   crossorigin=""/>
-   <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
-   crossorigin=""></script>
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    
     <title>Frontend Mentor | IP Address Tracker</title>
   </head>
   <body>
@@ -31,12 +33,12 @@
       <h1>ID Address Tracker</h1>
     </div>
     <div class="search-bar">
-      <form class="input_form" action="#">
-        <input type="search" id="input-id" value="search" />
+      <form class="input_form" action="#"id="myForm">
+        <input type="search" id="input-id" placeholder="Enter you IP address"/>
       </form>
-      <div class="arrow_button">
+      <button class="arrow_button" form="myForm">
         <img src="images/icon-arrow.svg" alt="arrow" />
-      </div>
+      </button>
     </div>
     <div class="address-information">
       <div class="ip-address">
@@ -58,6 +60,6 @@
     </div>
     <div id="map"></div>
 
-    <script src="app.js"></script>
+   <script src="app.js"></script>
   </body>
 </html>

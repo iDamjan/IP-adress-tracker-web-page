@@ -18,7 +18,7 @@ input[type="search"]::-webkit-search-results-decoration {
 // REMOVE DEFAULT STYLES FOR SEARCH ELEMENTS
 
 #map {
-  height: 180px;
+  height: 300px;
   width: 100%;
 }
 body {
@@ -73,7 +73,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
   }
+  .arrow_button:hover{ 
+    cursor: pointer;
+    background-color: rgb(32, 32, 32);
+  }
+  .arrow_button:active{ 
+    cursor: pointer;
+    background-color: rgb(65, 0, 150);
+  }
+
 }
 .address-information {
   background-color: white;

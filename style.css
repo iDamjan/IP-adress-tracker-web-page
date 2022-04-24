@@ -6,8 +6,12 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 #map {
-  height: 300px;
+  height: 1000px;
   width: 100%;
+  max-width: 1440px;
+  position: absolute;
+  top: 23%;
+  z-index: 1;
 }
 
 body {
@@ -25,6 +29,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 1.875rem 1.5rem;
 }
 
@@ -38,6 +45,7 @@ body {
 
 .search-bar {
   width: 100%;
+  max-width: 600px;
   color: #555;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -98,7 +106,10 @@ body {
 
 .address-information {
   background-color: white;
+  z-index: 2;
+  position: relative;
   width: 100%;
+  max-width: 1100px;
   padding: 1.68rem 0;
   margin-top: 1.68rem;
   display: -webkit-box;
@@ -131,5 +142,53 @@ body {
   text-align: center;
   margin-top: 0.5rem;
   color: #2b2b2b;
+}
+
+@media (min-width: 60em) {
+  .address-information {
+    background-color: white;
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    padding: 1.68rem 0;
+    margin-top: 1.68rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 5px 20px 2px gray;
+            box-shadow: 0px 5px 20px 2px gray;
+  }
+  .address-information div {
+    border-right: 1px solid rgba(128, 128, 128, 0.514);
+    padding-right: 2.5rem;
+    padding-left: 1rem;
+  }
+  .address-information div:last-child {
+    border: none;
+    padding-right: 0;
+  }
+  .address-information h3 {
+    color: #969696;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+  }
+  .address-information h2 {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #2b2b2b;
+  }
 }
 /*# sourceMappingURL=style.css.map */

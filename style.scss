@@ -12,14 +12,18 @@ input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
-  -webkit-appearance:none;
+  -webkit-appearance: none;
 }
 
 // REMOVE DEFAULT STYLES FOR SEARCH ELEMENTS
 
 #map {
-  height: 300px;
+  height: 1000px;
   width: 100%;
+  max-width: 1440px;
+  position: absolute;
+  top: 23%;
+  z-index: 1;
 }
 body {
   font-family: $Main-font;
@@ -29,6 +33,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 1.875rem 1.5rem;
 }
 
@@ -44,6 +49,7 @@ body {
 
 .search-bar {
   width: 100%;
+  max-width: 600px;
   color: #555;
   display: flex;
   justify-content: space-between;
@@ -66,7 +72,7 @@ body {
       border: none;
     }
   }
-  .arrow_button{
+  .arrow_button {
     background-color: black;
     width: 15%;
     height: 100%;
@@ -75,19 +81,21 @@ body {
     align-items: center;
     border: none;
   }
-  .arrow_button:hover{ 
+  .arrow_button:hover {
     cursor: pointer;
     background-color: rgb(32, 32, 32);
   }
-  .arrow_button:active{ 
+  .arrow_button:active {
     cursor: pointer;
     background-color: rgb(65, 0, 150);
   }
-
 }
 .address-information {
   background-color: white;
+  z-index: 2;
+  position: relative;
   width: 100%;
+  max-width: 1100px;
   padding: 1.68rem 0;
   margin-top: 1.68rem;
   display: flex;
@@ -107,5 +115,44 @@ body {
     text-align: center;
     margin-top: 0.5rem;
     color: $veryDarkGray;
+  }
+}
+
+@media (min-width: 60em) {
+  .address-information {
+    background-color: white;
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    padding: 1.68rem 0;
+    margin-top: 1.68rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px 2px gray;
+    div {
+      border-right: 1px solid rgba(128, 128, 128, 0.514);
+      padding-right: 2.5rem;
+      padding-left: 1rem;
+    }
+    div:last-child {
+      border: none;
+      padding-right: 0;
+    }
+    h3 {
+      color: $darkGray;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 0.2rem;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+      margin-top: 0.5rem;
+      color: $veryDarkGray;
+    }
   }
 }
